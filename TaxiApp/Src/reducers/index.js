@@ -1,6 +1,6 @@
 import {combineReducers} from 'redux';
 
-import Home from './HomeReducer';
+import Home from './Home';
 
 export default combineReducers({
   Home,
