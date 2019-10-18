@@ -12,11 +12,12 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_CURRENT_LOCATION:
+      console.log('============action.latitude', action);
       return {
         ...state,
         region: {
-          latitude: action.payload.coords.latitude,
-          longitude: action.payload.coords.longitude,
+          latitude: action.latitude,
+          longitude: action.longitude,
           latitudeDelta: 0.015,
           longitudeDelta: 0.0121,
         },

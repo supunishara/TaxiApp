@@ -37,6 +37,13 @@
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "TaxiApp-tvOS";
 		};
+		7AB89B4723597B7D00FCAEC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AB89B4323597B7C00FCAEC1 /* RNCGeolocation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNCGeolocation;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +68,7 @@
 		46E8093A712485D155AEE6D7 /* libPods-TaxiApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaxiApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		542FD2F3A9B170C159DF0122 /* Pods-TaxiApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxiApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-TaxiApp-tvOSTests/Pods-TaxiApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		74F47633A54F10A468DC09EA /* libPods-TaxiAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaxiAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7AB89B4323597B7C00FCAEC1 /* RNCGeolocation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCGeolocation.xcodeproj; path = "../node_modules/@react-native-community/geolocation/ios/RNCGeolocation.xcodeproj"; sourceTree = "<group>"; };
 		82C507F6645807E0BEC9BDB7 /* Pods-TaxiAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxiAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TaxiAppTests/Pods-TaxiAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B29603F7E4799D0D790CF6DE /* libPods-TaxiApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaxiApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9791001B5ACCDD2E0D12832 /* Pods-TaxiApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxiApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-TaxiApp-tvOSTests/Pods-TaxiApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -149,9 +157,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7AB89B4423597B7C00FCAEC1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7AB89B4823597B7D00FCAEC1 /* libRNCGeolocation.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				7AB89B4323597B7C00FCAEC1 /* RNCGeolocation.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -321,6 +338,12 @@
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 7AB89B4423597B7C00FCAEC1 /* Products */;
+					ProjectRef = 7AB89B4323597B7C00FCAEC1 /* RNCGeolocation.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* TaxiApp */,
@@ -330,6 +353,16 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		7AB89B4823597B7D00FCAEC1 /* libRNCGeolocation.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNCGeolocation.a;
+			remoteRef = 7AB89B4723597B7D00FCAEC1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {

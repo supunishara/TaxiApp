@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {View, StyleSheet, Dimensions} from 'react-native';
 import {connect} from 'react-redux';
 
-import {getCurrentLocation} from '../Actions/Home';
+import {change} from '../Actions/Home';
 
 import Map from '../Components/MapContainer/index';
 
@@ -15,7 +15,7 @@ class Home extends Component {
   };
 
   componentWillMount() {
-    this.props.getCurrentLocation();
+    this.props.change();
   }
 
   render() {
@@ -34,7 +34,7 @@ const mapStateToProps = state => {
 };
 
 const mapActionCreators = {
-  getCurrentLocation,
+  change,
 };
 
 export default connect(
