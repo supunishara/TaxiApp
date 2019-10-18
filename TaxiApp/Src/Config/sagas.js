@@ -1,35 +1,28 @@
 import {all, call, put, takeEvery} from 'redux-saga/effects';
+import Geolocation from '@react-native-community/geolocation';
 
-import {change} from '../Actions/Home';
+import {
+  GET_CURRENT_LOCATION,
+  GET_CURRENT_LOCATION_SUCCESS,
+} from '../Actions/Actiontypes';
 import {
   locationChangeChannel,
   currentLocationChannel,
 } from '../Services/Location';
 
-// function* locationChange({coords}) {
-//   // The `latitude`, `longitude`
-//   // parameters come from `watchPosition`.
-//   const {latitude, longitude} = coords;
+const getUserLocation = () =>
+  new Promise((resolve, reject) => {
+    Geolocation.getCurrentPosition(
+      location => resolve(location),
+      error => reject(error),
+    );
+  });
 
-//   // Log the `LOCATION_CHANGE` action.
-//   yield put(change({latitude, longitude}));
-// }
-
-// function* openLocationWatch() {
-//   const channel = yield call(currentLocationChannel);
-//   yield takeEvery(channel, locationChange);
-// }
-
-function* CurrentLocation({coords}) {
-  const {latitude, longitude} = coords;
-  yield put(change({latitude, longitude}));
-}
-
-function* openCurrentLocation() {
-  const channel = yield call(currentLocationChannel);
-  yield takeEvery(channel, CurrentLocation);
+function* CurrentLocation() {
+  const location = yield call(getUserLocation);
+  yield put({type: GET_CURRENT_LOCATION_SUCCESS, location});
 }
 
 export default function* rootSaga() {
-  yield all([openCurrentLocation()]);
+  yield takeEvery(GET_CURRENT_LOCATION, CurrentLocation);
 }
