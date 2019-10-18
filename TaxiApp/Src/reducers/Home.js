@@ -18,18 +18,19 @@ const reducer = (state = initialState, action) => {
       console.log('============action.latitude', action);
       return {
         ...state,
-        // region: {
-        //   latitude: action.latitude,
-        //   longitude: action.longitude,
-        //   latitudeDelta: 0.015,
-        //   longitudeDelta: 0.0121,
-        // },
       };
 
     case GET_CURRENT_LOCATION_SUCCESS:
-      console.log('============GET_CURRENT_LOCATION_SUCCESS', action);
+      const {latitude, longitude} = action.location.coords;
+      console.log('============latitude', latitude);
       return {
         ...state,
+        region: {
+          latitude: latitude,
+          longitude: longitude,
+          latitudeDelta: 0.015,
+          longitudeDelta: 0.0121,
+        },
       };
     default:
       return state;
