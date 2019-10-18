@@ -2,6 +2,8 @@ import {eventChannel, END} from 'redux-saga';
 
 import Geolocation from '@react-native-community/geolocation';
 
+//https://recodes.co/react-native-consume-users-location-with-redux-saga/
+
 // Configuration for the `geolocation.watchPosition`.
 const WATCH_POSITION_OPTIONS = {
   enableHighAccuracy: true,
