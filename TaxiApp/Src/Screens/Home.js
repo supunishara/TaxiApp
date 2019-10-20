@@ -5,7 +5,6 @@ import {connect} from 'react-redux';
 import {
   getCurrentLocation,
   getLocationInput,
-  toggleLocationInput,
   getAddressPredictions,
 } from '../Actions/Home';
 
@@ -25,12 +24,13 @@ class Home extends Component {
     this.props.getCurrentLocation();
   }
 
-  onInputFocused(id, Value) {
-    console.log(id);
-    console.log(Value);
-    this.props.toggleLocationInput('dropOff');
-    // this.props.getLocationInput({value: Value, id: id});
-  }
+  renderItem = item => {
+    return (
+      <View style={styles.rowItem}>
+        <Text>{item.primaryText}</Text>
+      </View>
+    );
+  };
 
   render() {
     return (
@@ -43,9 +43,6 @@ class Home extends Component {
           onChangeText={text =>
             this.props.getLocationInput({value: text, id: 'pickUp'})
           }
-          onFocus={() =>
-            this.onInputFocused('pickUp', this.props.textInputValuePickUp)
-          }
           value={this.props.textInputValuePickUp}
         />
         <SearchBox
@@ -55,12 +52,13 @@ class Home extends Component {
           onChangeText={text =>
             this.props.getLocationInput({value: text, id: 'dropOff'})
           }
-          onFocus={() =>
-            this.onInputFocused('dropOff', this.props.textInputValueDropOff)
-          }
           value={this.props.textInputValueDropOff}
         />
-        <FlatList />
+        <FlatList
+          data={this.props.predictions}
+          // renderItem={this.renderItem}
+          renderItem={({item, index}) => this.renderItem(item)}
+        />
       </View>
     );
   }
@@ -105,5 +103,9 @@ const styles = StyleSheet.create({
     top: 70,
     position: 'absolute',
     width: Width,
+  },
+  rowItem: {
+    width: Width,
+    height: 30,
   },
 });

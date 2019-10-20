@@ -66,34 +66,34 @@ const reducer = (state = initialState, action) => {
         };
       }
 
-    case TOGGLE_LOCATION_INPUT:
-      if (action.payload === 'pickUp') {
-        // console.log('pickUp');
-        return {
-          ...state,
-          resultType: {
-            pickUp: true,
-            dropOff: false,
-          },
-          predictions: [],
-        };
-      } else {
-        // console.log('dropOff');
-        return {
-          ...state,
-          resultType: {
-            pickUp: false,
-            dropOff: true,
-          },
-          predictions: [],
-        };
-      }
+    // case TOGGLE_LOCATION_INPUT:
+    //   if (action.payload === 'pickUp') {
+    //     // console.log('pickUp');
+    //     return {
+    //       ...state,
+    //       resultType: {
+    //         pickUp: true,
+    //         dropOff: false,
+    //       },
+    //       predictions: [],
+    //     };
+    //   } else {
+    //     // console.log('dropOff');
+    //     return {
+    //       ...state,
+    //       resultType: {
+    //         pickUp: false,
+    //         dropOff: true,
+    //       },
+    //       predictions: [],
+    //     };
+    //   }
     case GET_ADDRESS_PREDICTIONS:
       return {
         ...state,
       };
     case GET_ADDRESS_PREDICTIONS_SUCCESS:
-      console.log('action===========here', action);
+      console.log('action===========here', action.result);
       return {
         ...state,
         predictions: action.result,

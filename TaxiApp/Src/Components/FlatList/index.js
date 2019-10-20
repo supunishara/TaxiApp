@@ -4,14 +4,13 @@ import {View, StyleSheet, Dimensions, FlatList} from 'react-native';
 const Width = Dimensions.get('window').width;
 const Height = Dimensions.get('window').height;
 
-const FlatListComponent = ({}) => {
+const FlatListComponent = ({data, renderItem}) => {
   return (
     <View style={styles.searchResultWrapper}>
       <FlatList
-        horizontal={true}
-        contentContainerStyle={{paddingBottom: 8}}
-        // data={this.state.imagesArray}
-        // renderItem={({item, index}) => this.renderSliderItem(item, index)}
+        contentContainerStyle={{flex: 1}}
+        data={data}
+        renderItem={renderItem}
       />
     </View>
   );

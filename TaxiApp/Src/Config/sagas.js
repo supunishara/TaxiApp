@@ -29,7 +29,7 @@ function* CurrentLocation() {
 }
 
 const getPlacesPrediction = option =>
-  RNGooglePlaces.getAutocompletePredictions(option.value);
+  RNGooglePlaces.getAutocompletePredictions(option.value, {country: 'LK'});
 
 function* getGooglePlaces() {
   //here we getting passed parameters of action
