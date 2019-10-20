@@ -20,6 +20,9 @@
 		2DCD954D1E0B4F2C00145EB5 /* TaxiAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* TaxiAppTests.m */; };
 		3A1E81F8B3E74AEA33EEEB85 /* libPods-TaxiApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 144D8A72D70D3D668845D8F1 /* libPods-TaxiApp-tvOS.a */; };
 		7425628F85FD253725E18A80 /* libPods-TaxiApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B29603F7E4799D0D790CF6DE /* libPods-TaxiApp.a */; };
+		7A4B674E2359C22200200319 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4B67432359C16800200319 /* Lottie.framework */; };
+		7A4B674F2359C31800200319 /* Lottie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4B67432359C16800200319 /* Lottie.framework */; };
+		7A4B67502359C31800200319 /* Lottie.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4B67432359C16800200319 /* Lottie.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,48 @@
 			remoteGlobalIDString = 2D02E47A1E0B4A5D006451C7;
 			remoteInfo = "TaxiApp-tvOS";
 		};
+		7A4B67422359C16800200319 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A4B673A2359C16800200319 /* Lottie.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 62CA59B81E3C173B002D7188;
+			remoteInfo = Lottie_iOS;
+		};
+		7A4B67442359C16800200319 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A4B673A2359C16800200319 /* Lottie.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = FAE1F7E61E428CBE002E0974;
+			remoteInfo = Lottie_macOS;
+		};
+		7A4B67462359C16800200319 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A4B673A2359C16800200319 /* Lottie.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8C5379761FB471D100C1BC65;
+			remoteInfo = Lottie_tvOS;
+		};
+		7A4B67482359C16800200319 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A4B673A2359C16800200319 /* Lottie.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 84FE12EF1E4C1485009B157C;
+			remoteInfo = LottieLibraryIOS;
+		};
+		7A4B674A2359C16800200319 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A4B673A2359C16800200319 /* Lottie.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6445B0D5207E0D4D00D84F6A;
+			remoteInfo = LottieLibraryMacOS;
+		};
+		7A4B67512359C31800200319 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A4B673A2359C16800200319 /* Lottie.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 62CA59B71E3C173B002D7188;
+			remoteInfo = Lottie_iOS;
+		};
 		7AB89B4723597B7D00FCAEC1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 7AB89B4323597B7C00FCAEC1 /* RNCGeolocation.xcodeproj */;
@@ -45,6 +90,20 @@
 			remoteInfo = RNCGeolocation;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		7A4B67532359C31800200319 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				7A4B67502359C31800200319 /* Lottie.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
@@ -68,6 +127,7 @@
 		46E8093A712485D155AEE6D7 /* libPods-TaxiApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaxiApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		542FD2F3A9B170C159DF0122 /* Pods-TaxiApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxiApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-TaxiApp-tvOSTests/Pods-TaxiApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		74F47633A54F10A468DC09EA /* libPods-TaxiAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaxiAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A4B673A2359C16800200319 /* Lottie.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lottie.xcodeproj; path = "../node_modules/lottie-ios/Lottie.xcodeproj"; sourceTree = "<group>"; };
 		7AB89B4323597B7C00FCAEC1 /* RNCGeolocation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNCGeolocation.xcodeproj; path = "../node_modules/@react-native-community/geolocation/ios/RNCGeolocation.xcodeproj"; sourceTree = "<group>"; };
 		82C507F6645807E0BEC9BDB7 /* Pods-TaxiAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TaxiAppTests.debug.xcconfig"; path = "Target Support Files/Pods-TaxiAppTests/Pods-TaxiAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B29603F7E4799D0D790CF6DE /* libPods-TaxiApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TaxiApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +150,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A4B674E2359C22200200319 /* Lottie.framework in Frameworks */,
+				7A4B674F2359C31800200319 /* Lottie.framework in Frameworks */,
 				7425628F85FD253725E18A80 /* libPods-TaxiApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -157,6 +219,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7A4B673B2359C16800200319 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7A4B67432359C16800200319 /* Lottie.framework */,
+				7A4B67452359C16800200319 /* Lottie.framework */,
+				7A4B67472359C16800200319 /* Lottie.framework */,
+				7A4B67492359C16800200319 /* libLottie.a */,
+				7A4B674B2359C16800200319 /* libLottie.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		7AB89B4423597B7C00FCAEC1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +242,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				7A4B673A2359C16800200319 /* Lottie.xcodeproj */,
 				7AB89B4323597B7C00FCAEC1 /* RNCGeolocation.xcodeproj */,
 			);
 			name = Libraries;
@@ -247,10 +322,12 @@
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				BD3831E7C53E98470E718E39 /* [CP] Copy Pods Resources */,
+				7A4B67532359C31800200319 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7A4B67522359C31800200319 /* PBXTargetDependency */,
 			);
 			name = TaxiApp;
 			productName = TaxiApp;
@@ -340,6 +417,10 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 7A4B673B2359C16800200319 /* Products */;
+					ProjectRef = 7A4B673A2359C16800200319 /* Lottie.xcodeproj */;
+				},
+				{
 					ProductGroup = 7AB89B4423597B7C00FCAEC1 /* Products */;
 					ProjectRef = 7AB89B4323597B7C00FCAEC1 /* RNCGeolocation.xcodeproj */;
 				},
@@ -355,6 +436,41 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		7A4B67432359C16800200319 /* Lottie.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Lottie.framework;
+			remoteRef = 7A4B67422359C16800200319 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7A4B67452359C16800200319 /* Lottie.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Lottie.framework;
+			remoteRef = 7A4B67442359C16800200319 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7A4B67472359C16800200319 /* Lottie.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Lottie.framework;
+			remoteRef = 7A4B67462359C16800200319 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7A4B67492359C16800200319 /* libLottie.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLottie.a;
+			remoteRef = 7A4B67482359C16800200319 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7A4B674B2359C16800200319 /* libLottie.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLottie.a;
+			remoteRef = 7A4B674A2359C16800200319 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		7AB89B4823597B7D00FCAEC1 /* libRNCGeolocation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -435,10 +551,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TaxiApp/Pods-TaxiApp-resources.sh",
 				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -620,6 +738,11 @@
 			isa = PBXTargetDependency;
 			target = 2D02E47A1E0B4A5D006451C7 /* TaxiApp-tvOS */;
 			targetProxy = 2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */;
+		};
+		7A4B67522359C31800200319 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Lottie_iOS;
+			targetProxy = 7A4B67512359C31800200319 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

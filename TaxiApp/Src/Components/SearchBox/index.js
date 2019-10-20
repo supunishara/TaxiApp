@@ -1,25 +1,52 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, Dimensions, TextInput, Text} from 'react-native';
+import {
+  View,
+  StyleSheet,
+  Dimensions,
+  TextInput,
+  Text,
+  Image,
+} from 'react-native';
+import LottieView from 'lottie-react-native';
+
+import {locationLottie} from '../../Config/Images';
 
 const Width = Dimensions.get('window').width;
 const Height = Dimensions.get('window').height;
 
-const SearchBox = () => {
+const SearchBox = ({
+  style,
+  placeholder,
+  title,
+  onChangeText,
+  onFocus,
+  value,
+}) => {
   return (
-    <View style={styles.searchBox}>
+    <View style={style}>
       <View style={styles.inputWrapper}>
-        <Text style={styles.label}>PICK UP</Text>
-        <TextInput
-          style={styles.inputSearch}
-          numberOfLines={1}
-          placeholder="Choose PickUp Location"
-          // onChangeText={text => {
-          //     this.props.profileFieldsChange({
-          //         prop: propKey,
-          //         value: text
-          //     });
-          // }}
-        />
+        <Text style={styles.label}>{title}</Text>
+        <View style={styles.rowWrapper}>
+          <Image
+            source={locationLottie}
+            style={{
+              height: 25,
+              width: 25,
+              resizeMode: 'stretch',
+              borderRadius: 7,
+            }}
+          />
+          <View style={{flex: 1}}>
+            <TextInput
+              style={styles.inputSearch}
+              numberOfLines={1}
+              placeholder={placeholder}
+              onChangeText={onChangeText}
+              onFocus={onFocus}
+              value={value}
+            />
+          </View>
+        </View>
       </View>
     </View>
   );
@@ -28,11 +55,6 @@ const SearchBox = () => {
 export default SearchBox;
 
 const styles = StyleSheet.create({
-  searchBox: {
-    top: 20,
-    position: 'absolute',
-    width: Width,
-  },
   inputWrapper: {
     marginLeft: 15,
     marginRight: 15,
@@ -44,6 +66,7 @@ const styles = StyleSheet.create({
   },
   inputSearch: {
     fontSize: 14,
+    paddingLeft: 20,
   },
   label: {
     fontSize: 10,
@@ -51,5 +74,8 @@ const styles = StyleSheet.create({
     marginLeft: 10,
     marginTop: 10,
     marginBottom: 0,
+  },
+  rowWrapper: {
+    flexDirection: 'row',
   },
 });

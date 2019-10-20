@@ -23,7 +23,7 @@ target 'TaxiApp' do
   pod 'React-RCTText', :path => '../node_modules/react-native/Libraries/Text'
   pod 'React-RCTVibration', :path => '../node_modules/react-native/Libraries/Vibration'
   pod 'React-Core/RCTWebSocket', :path => '../node_modules/react-native/'
-
+  
   pod 'React-cxxreact', :path => '../node_modules/react-native/ReactCommon/cxxreact'
   pod 'React-jsi', :path => '../node_modules/react-native/ReactCommon/jsi'
   pod 'React-jsiexecutor', :path => '../node_modules/react-native/ReactCommon/jsiexecutor'
@@ -32,20 +32,21 @@ target 'TaxiApp' do
   pod 'ReactCommon/turbomodule/core', :path => "../node_modules/react-native/ReactCommon"
   pod 'Yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
   pod 'react-native-maps', path: rn_maps_path
-   pod 'react-native-google-maps', path: rn_maps_path  # Uncomment this line if you want to support GoogleMaps on iOS
-   pod 'GoogleMaps'  # Uncomment this line if you want to support GoogleMaps on iOS
-   pod 'Google-Maps-iOS-Utils'
-   pod 'react-native-geolocation', path: '../node_modules/@react-native-community/geolocation'
-
+  pod 'react-native-google-maps', path: rn_maps_path  # Uncomment this line if you want to support GoogleMaps on iOS
+  pod 'GoogleMaps', '~> 3.1.0'
+  pod 'Google-Maps-iOS-Utils'
+  pod 'react-native-geolocation', path: '../node_modules/@react-native-community/geolocation'
+  pod 'react-native-google-places', :path => '../node_modules/react-native-google-places'
+  
   pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
-
+  
   target 'TaxiAppTests' do
     inherit! :search_paths
     # Pods for testing
   end
-
+  
   use_native_modules!
 end
 
@@ -64,10 +65,10 @@ end
 
 target 'TaxiApp-tvOS' do
   # Pods for TaxiApp-tvOS
-
+  
   target 'TaxiApp-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
-
+  
 end
