@@ -20,7 +20,7 @@ export default FlatListComponent;
 
 const styles = StyleSheet.create({
   searchResultWrapper: {
-    top: 220,
+    top: 150,
     position: 'absolute',
     width: Width,
     flex: 1,
